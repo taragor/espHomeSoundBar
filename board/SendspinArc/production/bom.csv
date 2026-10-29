@@ -1,0 +1,19 @@
+﻿Designator,Footprint,Quantity,Value,LCSC Part #
+"C1, C2",C_0603,2,100n,
+D1,D_SOD-323,1,BAT54HT1G,C21107
+ESP32_S1,Waveshare_ESP32_S3_Zero_SMD,1,~,
+J1,HDMI-001S,1,HDMI_A_1.4,C720616
+"J2, J3, J4, J5",PinHeader_1x03_P2.54mm_Vertical,4,Conn_01x03,
+J6,PinSocket_1x04_P2.54mm_Vertical,1,Conn_01x04,
+R1,R_0603,1,1k,
+R10,R_0603,1,330,
+R11,R_0603,1,100,
+"R2, R4",R_0603,2,4k7,
+R6,R_0603,1,100k,
+R7,R_0603,1,68K,
+R8,R_0603,1,27k,
+R9,R_0603,1,229,
+TP1,PinHeader_1x01_P2.54mm_Vertical,1,5VSense,
+TP2,PinHeader_1x01_P2.54mm_Vertical,1,CEC,
+TP3,PinHeader_1x01_P2.54mm_Vertical,1,ARC,
+U1,SOIC-8_3.9x4.9mm_P1.27mm,1,M24C02-RMN,
