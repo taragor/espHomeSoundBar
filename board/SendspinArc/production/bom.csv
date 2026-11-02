@@ -2,18 +2,19 @@
 "C1, C2",C_0603,2,100n,
 D1,D_SOD-323,1,BAT54HT1G,C21107
 ESP32_S1,Waveshare_ESP32_S3_Zero_SMD,1,~,
-J1,HDMI-001S,1,HDMI_A_1.4,C720616
+J1,HDMI_A_Molex_208658-1001_Horizontal,1,HDMI_A_1.4,C720616
 "J2, J3, J4, J5",PinHeader_1x03_P2.54mm_Vertical,4,Conn_01x03,
-J6,PinSocket_1x04_P2.54mm_Vertical,1,Conn_01x04,
-R1,R_0603,1,1k,
-R10,R_0603,1,330,
-R11,R_0603,1,100,
-"R2, R4",R_0603,2,4k7,
-R6,R_0603,1,100k,
-R7,R_0603,1,68K,
-R8,R_0603,1,27k,
-R9,R_0603,1,229,
+J6,PinHeader_1x04_P2.54mm_Vertical,1,Conn_01x04,C160334
+"JP1, JP2, JP3, JP4",SolderJumper-2_P1.3mm_Bridged_Pad1.0x1.5mm,4,Jumper_2_Bridged,
+JP5,SolderJumper-2_P1.3mm_Open_RoundedPad1.0x1.5mm,1,Jumper_2_Open,
+R1,0603,1,1k,
+"R10, R9",0603,2,330,
+R11,0603,1,100,
+"R2, R4",0603,2,4k7,
+R6,0603,1,100k,
+R7,0603,1,68K,
+R8,0603,1,27k,
 TP1,PinHeader_1x01_P2.54mm_Vertical,1,5VSense,
 TP2,PinHeader_1x01_P2.54mm_Vertical,1,CEC,
 TP3,PinHeader_1x01_P2.54mm_Vertical,1,ARC,
-U1,SOIC-8_3.9x4.9mm_P1.27mm,1,M24C02-RMN,
+U1,SOIC-8_3.9x4.9mm_P1.27mm,1,M24C02-RMN,C83836

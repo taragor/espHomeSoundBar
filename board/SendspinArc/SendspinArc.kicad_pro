@@ -549,7 +549,7 @@
       "netlist": "",
       "plot": "",
       "specctra_dsn": "",
-      "step": "",
+      "step": "SendspinArc.step",
       "vrml": ""
     },
     "page_layout_descr_file": ""
@@ -714,7 +714,7 @@
         "uuid": "faa7f7ef-b387-4f3f-9c60-a8ff1acc425f"
       }
     ],
-    "used_designators": "#PWR1-10,C1-3,D1-2,ESP32_S1,J1-6,R1-12,TP1-3,U1-2",
+    "used_designators": "#PWR1-11,C1-3,D1-2,ESP32_S1,H1-5,J1-6,JP1-6,R1-16,TP1-3,U1-2",
     "variants": []
   },
   "sheets": [

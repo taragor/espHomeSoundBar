@@ -1129,6 +1129,461 @@
 			)
 			(embedded_fonts no)
 		)
+		(symbol "Jumper:Jumper_2_Bridged"
+			(pin_numbers
+				(hide yes)
+			)
+			(pin_names
+				(offset 0)
+				(hide yes)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(in_pos_files yes)
+			(duplicate_pin_numbers_are_jumpers no)
+			(property "Reference" "JP"
+				(at 0 1.905 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" "Jumper_2_Bridged"
+				(at 0 -2.54 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Datasheet" ""
+				(at 0 -5.08 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Description" "Jumper, 2-pole, closed/bridged"
+				(at 0 -7.62 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "ki_keywords" "Jumper SPST"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "ki_fp_filters" "Jumper* TestPoint*2Pads* TestPoint*Bridge*"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(symbol "Jumper_2_Bridged_0_0"
+				(circle
+					(center -2.032 0)
+					(radius 0.508)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(circle
+					(center 2.032 0)
+					(radius 0.508)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(symbol "Jumper_2_Bridged_0_1"
+				(arc
+					(start -1.524 0.254)
+					(mid 0 0.762)
+					(end 1.524 0.254)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(symbol "Jumper_2_Bridged_1_1"
+				(pin passive line
+					(at -5.08 0 0)
+					(length 2.54)
+					(name "A"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 5.08 0 180)
+					(length 2.54)
+					(name "B"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
+		(symbol "Jumper:Jumper_2_Open"
+			(pin_numbers
+				(hide yes)
+			)
+			(pin_names
+				(offset 0)
+				(hide yes)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(in_pos_files yes)
+			(duplicate_pin_numbers_are_jumpers no)
+			(property "Reference" "JP"
+				(at 0 2.794 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" "Jumper_2_Open"
+				(at 0 -2.286 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Datasheet" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Description" "Jumper, 2-pole, open"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "ki_keywords" "Jumper SPST"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "ki_fp_filters" "Jumper* TestPoint*2Pads* TestPoint*Bridge*"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(symbol "Jumper_2_Open_0_0"
+				(circle
+					(center -2.032 0)
+					(radius 0.508)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(circle
+					(center 2.032 0)
+					(radius 0.508)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(symbol "Jumper_2_Open_0_1"
+				(arc
+					(start -1.524 1.27)
+					(mid 0 1.778)
+					(end 1.524 1.27)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(symbol "Jumper_2_Open_1_1"
+				(pin passive line
+					(at -5.08 0 0)
+					(length 2.54)
+					(name "A"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 5.08 0 180)
+					(length 2.54)
+					(name "B"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
+		(symbol "Mechanical:MountingHole_Pad"
+			(pin_numbers
+				(hide yes)
+			)
+			(pin_names
+				(offset 1.016)
+				(hide yes)
+			)
+			(exclude_from_sim no)
+			(in_bom no)
+			(on_board yes)
+			(in_pos_files yes)
+			(duplicate_pin_numbers_are_jumpers no)
+			(property "Reference" "H"
+				(at 0 6.35 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" "MountingHole_Pad"
+				(at 0 4.445 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Datasheet" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Description" "Mounting Hole with connection"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "ki_keywords" "mounting hole"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "ki_fp_filters" "MountingHole*Pad*"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(symbol "MountingHole_Pad_0_1"
+				(circle
+					(center 0 1.27)
+					(radius 1.27)
+					(stroke
+						(width 1.27)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(symbol "MountingHole_Pad_1_1"
+				(pin input line
+					(at 0 -2.54 90)
+					(length 2.54)
+					(name "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
 		(symbol "WaveshareESP32S3Zero:Waveshare_ESP32_S3_Mini_Zero"
 			(exclude_from_sim no)
 			(in_bom yes)
@@ -1689,6 +2144,18 @@
 		(uuid "16e12e48-abea-427d-af09-fe9dc13ad8f9")
 	)
 	(rectangle
+		(start 243.84 20.32)
+		(end 298.45 95.25)
+		(stroke
+			(width 0)
+			(type dash)
+		)
+		(fill
+			(type none)
+		)
+		(uuid "93daae71-665c-4e19-8b45-a80a356e4332")
+	)
+	(rectangle
 		(start 307.34 20.32)
 		(end 345.44 95.25)
 		(stroke
@@ -1699,6 +2166,17 @@
 			(type none)
 		)
 		(uuid "97f1a580-deac-417d-a6e6-64b0bb0b6f25")
+	)
+	(text "ARC-Driver\n"
+		(exclude_from_sim no)
+		(at 244.856 21.844 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left top)
+		)
+		(uuid "09220533-5889-424e-b830-6fd1b651ced7")
 	)
 	(text "CEC_Driver"
 		(exclude_from_sim no)
@@ -1723,10 +2201,22 @@
 		(uuid "4f2d8781-9f21-443a-8328-ac8095b6c00f")
 	)
 	(junction
+		(at 67.31 46.99)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "01a2f9de-0018-425f-b928-0f128808f256")
+	)
+	(junction
 		(at 360.68 231.14)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "1120659c-30eb-4cd0-acff-c045ae9d7810")
+	)
+	(junction
+		(at 278.13 55.88)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "2bdfcb85-0028-4acc-9b4a-e9492f5d8296")
 	)
 	(junction
 		(at 370.84 231.14)
@@ -1765,6 +2255,12 @@
 		(uuid "7734f4fe-52dc-4924-8627-78971d85feeb")
 	)
 	(junction
+		(at 92.71 46.99)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "9368d251-4898-42fb-9a5e-3ca0f17dbb93")
+	)
+	(junction
 		(at 365.76 231.14)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -1777,16 +2273,16 @@
 		(uuid "a2ca3028-fd53-4de8-9a7e-a34a6c5d98a4")
 	)
 	(junction
+		(at 40.64 46.99)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "c4585293-9b32-4703-98f4-8a9a4f30e456")
+	)
+	(junction
 		(at 363.22 231.14)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "dccc2e8e-16e5-478b-880b-dbc7fcb26d63")
-	)
-	(junction
-		(at 278.13 55.88)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "f0f96ebf-9194-4955-b38d-d492eee134db")
 	)
 	(bus_entry
 		(at 205.74 193.04)
@@ -1798,7 +2294,7 @@
 		(uuid "0bd7b51b-306a-4755-be9d-8c9f037c6add")
 	)
 	(bus_entry
-		(at 341.63 207.01)
+		(at 327.66 207.01)
 		(size -2.54 -2.54)
 		(stroke
 			(width 0)
@@ -1816,7 +2312,7 @@
 		(uuid "c5b90ebd-c881-4ff8-9afb-b6cc05e5dd78")
 	)
 	(bus_entry
-		(at 341.63 209.55)
+		(at 327.66 209.55)
 		(size -2.54 -2.54)
 		(stroke
 			(width 0)
@@ -1843,6 +2339,16 @@
 			(type default)
 		)
 		(uuid "0f36f9f9-6e7f-408e-84d2-b91e2b7378ba")
+	)
+	(wire
+		(pts
+			(xy 40.64 46.99) (xy 40.64 49.53)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "109406c7-7d2b-4b03-a98d-51de0a43f629")
 	)
 	(wire
 		(pts
@@ -1956,7 +2462,7 @@
 	)
 	(wire
 		(pts
-			(xy 151.13 180.34) (xy 153.67 180.34)
+			(xy 148.59 180.34) (xy 153.67 180.34)
 		)
 		(stroke
 			(width 0)
@@ -1973,6 +2479,16 @@
 			(type default)
 		)
 		(uuid "366d638f-83c6-44e5-bf80-5460c3acb455")
+	)
+	(wire
+		(pts
+			(xy 67.31 44.45) (xy 67.31 46.99)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "3d348fce-bca5-42e6-96ac-c8511a72445f")
 	)
 	(wire
 		(pts
@@ -1996,13 +2512,53 @@
 	)
 	(wire
 		(pts
-			(xy 341.63 209.55) (xy 353.06 209.55)
+			(xy 92.71 30.48) (xy 92.71 34.29)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "41b4d102-99d9-4e74-82be-e95187ec0cc2")
+	)
+	(wire
+		(pts
+			(xy 92.71 44.45) (xy 92.71 46.99)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "422f1390-e496-4724-a06c-c18748155085")
+	)
+	(wire
+		(pts
+			(xy 327.66 209.55) (xy 353.06 209.55)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
 		(uuid "45826387-3434-42e2-81ee-60c0aa84abdb")
+	)
+	(wire
+		(pts
+			(xy 40.64 44.45) (xy 40.64 46.99)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "4624b954-3736-498e-896e-1dbb0c76824c")
+	)
+	(wire
+		(pts
+			(xy 278.13 40.64) (xy 278.13 43.18)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "4d5f71b9-6554-4537-b84b-34113484fc7a")
 	)
 	(wire
 		(pts
@@ -2066,6 +2622,26 @@
 	)
 	(wire
 		(pts
+			(xy 116.84 44.45) (xy 116.84 46.99)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "762f51bd-8ddd-4c79-ba58-31a632b70b81")
+	)
+	(wire
+		(pts
+			(xy 92.71 46.99) (xy 116.84 46.99)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "7a374ab6-3765-433b-8765-0985e208d3d7")
+	)
+	(wire
+		(pts
 			(xy 360.68 227.33) (xy 360.68 231.14)
 		)
 		(stroke
@@ -2074,9 +2650,29 @@
 		)
 		(uuid "7f4204fb-0356-472e-a9f6-2d5c35c66e30")
 	)
+	(wire
+		(pts
+			(xy 40.64 30.48) (xy 40.64 34.29)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "83816c8a-0fe9-491d-b8f3-e6414e54baf4")
+	)
+	(wire
+		(pts
+			(xy 116.84 30.48) (xy 116.84 34.29)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "87a4c947-9780-493a-b498-7ad5685458a3")
+	)
 	(bus
 		(pts
-			(xy 339.09 201.93) (xy 339.09 207.01)
+			(xy 325.12 201.93) (xy 325.12 207.01)
 		)
 		(stroke
 			(width 0)
@@ -2096,13 +2692,23 @@
 	)
 	(wire
 		(pts
-			(xy 341.63 207.01) (xy 353.06 207.01)
+			(xy 327.66 207.01) (xy 353.06 207.01)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
 		(uuid "9e556628-3480-4d87-a873-c4ecf495f670")
+	)
+	(wire
+		(pts
+			(xy 40.64 46.99) (xy 67.31 46.99)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "a31d00ba-80b7-4a78-9f76-d4309f6006e8")
 	)
 	(wire
 		(pts
@@ -2136,6 +2742,16 @@
 	)
 	(wire
 		(pts
+			(xy 278.13 55.88) (xy 288.29 55.88)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "aac8ba2d-4b7a-4282-b7ac-07cdc3fbb5e5")
+	)
+	(wire
+		(pts
 			(xy 320.04 38.1) (xy 320.04 43.18)
 		)
 		(stroke
@@ -2164,9 +2780,19 @@
 		)
 		(uuid "b0f5b7f2-2c6d-44c1-bd98-781ceb6bfab0")
 	)
+	(wire
+		(pts
+			(xy 67.31 46.99) (xy 92.71 46.99)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "b7c2a13d-5547-4c97-88e6-e620c1e40fa0")
+	)
 	(bus
 		(pts
-			(xy 284.48 201.93) (xy 339.09 201.93)
+			(xy 284.48 201.93) (xy 325.12 201.93)
 		)
 		(stroke
 			(width 0)
@@ -2193,6 +2819,16 @@
 			(type default)
 		)
 		(uuid "bd519212-7ebb-4ff3-87d0-1ddcc355abec")
+	)
+	(wire
+		(pts
+			(xy 278.13 53.34) (xy 278.13 55.88)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "bd895525-3000-42d1-ad1b-c720a37061f8")
 	)
 	(wire
 		(pts
@@ -2233,16 +2869,6 @@
 			(type default)
 		)
 		(uuid "cad9ab02-815b-4826-9937-83519d4eac86")
-	)
-	(wire
-		(pts
-			(xy 278.13 55.88) (xy 288.29 55.88)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "cc5f573b-c4ca-4507-bbc5-a0bf5ab857fe")
 	)
 	(wire
 		(pts
@@ -2303,6 +2929,16 @@
 			(type default)
 		)
 		(uuid "d7f800c2-4661-4a93-b564-92fc5f24e1d3")
+	)
+	(wire
+		(pts
+			(xy 67.31 30.48) (xy 67.31 34.29)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "e2be0eaa-e69b-4807-a3d1-e089f657b9a7")
 	)
 	(wire
 		(pts
@@ -2394,7 +3030,7 @@
 		)
 		(uuid "1bccdda2-e314-4d93-bdc1-c4cf71c037ff")
 	)
-	(label "ESP32-I2CSCL"
+	(label "ESP32-I2C.SCL"
 		(at 189.23 193.04 0)
 		(effects
 			(font
@@ -2414,7 +3050,7 @@
 		)
 		(uuid "21b820ce-58b8-4dd9-b839-f9e9997b112a")
 	)
-	(label "ESP32-I2CSDA"
+	(label "ESP32-I2C.SDA"
 		(at 189.23 195.58 0)
 		(effects
 			(font
@@ -2424,8 +3060,28 @@
 		)
 		(uuid "2e22d43b-5ffb-4714-b56c-d728fed7438b")
 	)
+	(label "HDMI-I2C.SDA"
+		(at 328.93 209.55 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "3b08a7e7-c0cd-402d-bab1-0755559dc2d4")
+	)
+	(label "HDMI-I2C.SCL"
+		(at 328.93 207.01 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "48942036-64e9-46ef-977b-83a8900b9c6e")
+	)
 	(label "VCC_ESP"
-		(at 151.13 180.34 180)
+		(at 148.59 180.34 180)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -2444,16 +3100,6 @@
 		)
 		(uuid "5289b55a-34ef-40f1-9905-7b185c2fe6b3")
 	)
-	(label "GPIO6"
-		(at 389.89 58.42 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left bottom)
-		)
-		(uuid "592ecf78-14da-47bf-8b17-ed565711d815")
-	)
 	(label "VCC_ESP"
 		(at 320.04 38.1 90)
 		(effects
@@ -2465,14 +3111,14 @@
 		(uuid "59ca83e0-422c-42e8-99a9-741ef79b4f09")
 	)
 	(label "GPIO5"
-		(at 320.04 86.36 270)
+		(at 255.27 38.1 90)
 		(effects
 			(font
 				(size 1.27 1.27)
 			)
-			(justify right bottom)
+			(justify left bottom)
 		)
-		(uuid "64beb4db-3b12-4ee4-8010-dc520fe75f64")
+		(uuid "6dc4051b-a854-4a49-8f07-a7cda16a0ff4")
 	)
 	(label "CEC"
 		(at 349.25 201.93 180)
@@ -2485,14 +3131,14 @@
 		(uuid "73223853-f3d2-4eb5-bcf7-61b610ad38f6")
 	)
 	(label "GPIO4"
-		(at 255.27 38.1 90)
+		(at 389.89 58.42 0)
 		(effects
 			(font
 				(size 1.27 1.27)
 			)
 			(justify left bottom)
 		)
-		(uuid "74a96d04-7cc6-456c-ae2d-69ed8e2becad")
+		(uuid "7363cd2d-92f0-4182-85ba-34d4da9393c7")
 	)
 	(label "+5V_HDMI"
 		(at 363.22 165.1 90)
@@ -2554,6 +3200,180 @@
 		)
 		(uuid "fa91442c-cba4-4ec5-b500-159c259ece46")
 	)
+	(label "GPIO6"
+		(at 320.04 86.36 270)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid "fea2c6b3-a597-4147-99ce-dba15c40cf80")
+	)
+	(symbol
+		(lib_id "Jumper:Jumper_2_Open")
+		(at 278.13 48.26 270)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "09e0567a-bc75-49fc-9ae9-96df96cbefce")
+		(property "Reference" "JP5"
+			(at 280.67 46.9899 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "Jumper_2_Open"
+			(at 280.67 49.5299 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Jumper:SolderJumper-2_P1.3mm_Open_RoundedPad1.0x1.5mm"
+			(at 278.13 48.26 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 278.13 48.26 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Jumper, 2-pole, open"
+			(at 278.13 48.26 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "88d44266-234b-4dd1-b24d-1c6b5fc2d9cf")
+		)
+		(pin "2"
+			(uuid "ff058c19-a5ff-498a-bdce-008723f301b0")
+		)
+		(instances
+			(project "SendspinArc"
+				(path "/faa7f7ef-b387-4f3f-9c60-a8ff1acc425f"
+					(reference "JP5")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Jumper:Jumper_2_Bridged")
+		(at 116.84 39.37 90)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "0cdc05b0-67d8-4f1a-92d8-7dda8da4904b")
+		(property "Reference" "JP4"
+			(at 118.11 38.0999 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Value" "Jumper_2_Bridged"
+			(at 118.11 40.6399 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Footprint" "Jumper:SolderJumper-2_P1.3mm_Bridged_Pad1.0x1.5mm"
+			(at 116.84 39.37 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 121.92 39.37 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Jumper, 2-pole, closed/bridged"
+			(at 124.46 39.37 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "2"
+			(uuid "f63a6785-e3d2-44d7-8662-827e14cb29a8")
+		)
+		(pin "1"
+			(uuid "77ab0eaa-b51c-41a9-9bb0-69bdb09caf9f")
+		)
+		(instances
+			(project "SendspinArc"
+				(path "/faa7f7ef-b387-4f3f-9c60-a8ff1acc425f"
+					(reference "JP4")
+					(unit 1)
+				)
+			)
+		)
+	)
 	(symbol
 		(lib_id "Device:R")
 		(at 255.27 46.99 0)
@@ -2588,7 +3408,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "PCM_JLCPCB:R_0603"
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
 			(at 253.492 46.99 90)
 			(hide yes)
 			(show_name no)
@@ -2670,7 +3490,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "PCM_JLCPCB:R_0603"
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
 			(at 253.492 64.77 90)
 			(hide yes)
 			(show_name no)
@@ -2704,10 +3524,10 @@
 			)
 		)
 		(pin "1"
-			(uuid "d2871d83-480d-4dd3-85fb-afdc9e695cd9")
+			(uuid "d2871d83-480d-4dd3-85fb-afdc9e695cda")
 		)
 		(pin "2"
-			(uuid "f71be64a-ba4e-410e-8077-34f5b26c8084")
+			(uuid "f71be64a-ba4e-410e-8077-34f5b26c8085")
 		)
 		(instances
 			(project "SendspinArc"
@@ -2830,7 +3650,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "PCM_JLCPCB:R_0603"
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
 			(at 318.262 77.47 90)
 			(hide yes)
 			(show_name no)
@@ -2879,8 +3699,8 @@
 		)
 	)
 	(symbol
-		(lib_id "Connector:TestPoint")
-		(at 278.13 55.88 0)
+		(lib_id "Jumper:Jumper_2_Bridged")
+		(at 67.31 39.37 90)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -2889,31 +3709,31 @@
 		(in_pos_files yes)
 		(dnp no)
 		(fields_autoplaced yes)
-		(uuid "46b4b209-1561-4021-822c-e62bf7617727")
-		(property "Reference" "TP3"
-			(at 280.67 51.3079 0)
+		(uuid "2b4c588c-840f-4582-95a9-54f4164362d3")
+		(property "Reference" "JP2"
+			(at 68.58 38.0999 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(justify left)
+				(justify right)
 			)
 		)
-		(property "Value" "ARC"
-			(at 280.67 53.8479 0)
+		(property "Value" "Jumper_2_Bridged"
+			(at 68.58 40.6399 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(justify left)
+				(justify right)
 			)
 		)
-		(property "Footprint" "Connector_PinHeader_2.54mm:PinHeader_1x01_P2.54mm_Vertical"
-			(at 283.21 55.88 0)
+		(property "Footprint" "Jumper:SolderJumper-2_P1.3mm_Bridged_Pad1.0x1.5mm"
+			(at 67.31 39.37 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2924,7 +3744,171 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 283.21 55.88 0)
+			(at 72.39 39.37 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Jumper, 2-pole, closed/bridged"
+			(at 74.93 39.37 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "2"
+			(uuid "72475cf4-32c8-4b95-bd44-e1da71cc5e48")
+		)
+		(pin "1"
+			(uuid "4429fc85-042c-43ce-894b-8f5c7089d756")
+		)
+		(instances
+			(project "SendspinArc"
+				(path "/faa7f7ef-b387-4f3f-9c60-a8ff1acc425f"
+					(reference "JP2")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Jumper:Jumper_2_Bridged")
+		(at 40.64 39.37 90)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "2eed6916-472f-48a6-bf42-ce40188954ef")
+		(property "Reference" "JP1"
+			(at 41.91 38.0999 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Value" "Jumper_2_Bridged"
+			(at 41.91 40.6399 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Footprint" "Jumper:SolderJumper-2_P1.3mm_Bridged_Pad1.0x1.5mm"
+			(at 40.64 39.37 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 45.72 39.37 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Jumper, 2-pole, closed/bridged"
+			(at 48.26 39.37 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "2"
+			(uuid "6787073f-fbbb-4b89-b1c8-0fc24af11364")
+		)
+		(pin "1"
+			(uuid "f7dae600-6dab-453d-a22a-a10352b008e7")
+		)
+		(instances
+			(project "SendspinArc"
+				(path "/faa7f7ef-b387-4f3f-9c60-a8ff1acc425f"
+					(reference "JP1")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Connector:TestPoint")
+		(at 278.13 40.64 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "46b4b209-1561-4021-822c-e62bf7617727")
+		(property "Reference" "TP3"
+			(at 280.67 36.0679 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "ARC"
+			(at 280.67 38.6079 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Connector_PinHeader_2.54mm:PinHeader_1x01_P2.54mm_Vertical"
+			(at 283.21 40.64 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 283.21 40.64 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2935,7 +3919,7 @@
 			)
 		)
 		(property "Description" "test point"
-			(at 278.13 55.88 0)
+			(at 278.13 40.64 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2991,7 +3975,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "PCM_JLCPCB:R_0603"
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
 			(at 367.792 52.07 90)
 			(hide yes)
 			(show_name no)
@@ -3198,6 +4182,84 @@
 	)
 	(symbol
 		(lib_id "power:GND")
+		(at 40.64 49.53 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "69004712-58fa-41a9-ad28-b0d566ead3e1")
+		(property "Reference" "#PWR010"
+			(at 40.64 55.88 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "GND"
+			(at 40.64 54.61 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 40.64 49.53 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 40.64 49.53 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+			(at 40.64 49.53 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "4074223d-25df-4575-8575-cd7b9827b47e")
+		)
+		(instances
+			(project "SendspinArc"
+				(path "/faa7f7ef-b387-4f3f-9c60-a8ff1acc425f"
+					(reference "#PWR010")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GND")
 		(at 370.84 233.68 0)
 		(unit 1)
 		(body_style 1)
@@ -3275,6 +4337,85 @@
 		)
 	)
 	(symbol
+		(lib_id "Mechanical:MountingHole_Pad")
+		(at 92.71 27.94 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom no)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "7602012f-7b75-4434-b4aa-3176a494da41")
+		(property "Reference" "H3"
+			(at 95.25 25.3999 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "MountingHole_Pad"
+			(at 95.25 27.9399 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "MountingHole:MountingHole_3.2mm_M3_DIN965_Pad_TopBottom"
+			(at 92.71 27.94 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 92.71 27.94 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Mounting Hole with connection"
+			(at 92.71 27.94 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "a15ef275-34e2-4462-aaf4-bed52c0ba54f")
+		)
+		(instances
+			(project "SendspinArc"
+				(path "/faa7f7ef-b387-4f3f-9c60-a8ff1acc425f"
+					(reference "H3")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "Connector:HDMI_A_1.4")
 		(at 363.22 199.39 0)
 		(unit 1)
@@ -3308,7 +4449,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "JLCImport:HDMI-001S"
+		(property "Footprint" "Connector_Video:HDMI_A_Molex_208658-1001_Horizontal"
 			(at 363.855 199.39 0)
 			(hide yes)
 			(show_name no)
@@ -3331,6 +4472,17 @@
 			)
 		)
 		(property "Description" "HDMI 1.4+ type A connector"
+			(at 363.22 199.39 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC" "C720616"
 			(at 363.22 199.39 0)
 			(hide yes)
 			(show_name no)
@@ -3444,7 +4596,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "PCM_JLCPCB:R_0603"
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
 			(at 318.262 63.5 90)
 			(hide yes)
 			(show_name no)
@@ -3603,7 +4755,7 @@
 				)
 			)
 		)
-		(property "Footprint" "PCM_JLCPCB:R_0603"
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
 			(at 331.47 215.392 90)
 			(hide yes)
 			(show_name no)
@@ -3685,7 +4837,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "PCM_JLCPCB:R_0603"
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
 			(at 367.792 64.77 90)
 			(hide yes)
 			(show_name no)
@@ -3719,10 +4871,10 @@
 			)
 		)
 		(pin "2"
-			(uuid "b61c4c12-0939-4733-9031-f0248023c32b")
+			(uuid "b61c4c12-0939-4733-9031-f0248023c32c")
 		)
 		(pin "1"
-			(uuid "1a328dea-7779-4624-8a91-17d1d191c53c")
+			(uuid "1a328dea-7779-4624-8a91-17d1d191c53d")
 		)
 		(instances
 			(project "SendspinArc"
@@ -3942,6 +5094,88 @@
 		)
 	)
 	(symbol
+		(lib_id "Jumper:Jumper_2_Bridged")
+		(at 92.71 39.37 90)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "dfe2f008-b2f2-4370-81e3-4bab1f6250d3")
+		(property "Reference" "JP3"
+			(at 93.98 38.0999 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Value" "Jumper_2_Bridged"
+			(at 93.98 40.6399 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Footprint" "Jumper:SolderJumper-2_P1.3mm_Bridged_Pad1.0x1.5mm"
+			(at 92.71 39.37 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 97.79 39.37 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Jumper, 2-pole, closed/bridged"
+			(at 100.33 39.37 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "2"
+			(uuid "ef205fb4-3f9f-4e0d-be47-c8b09335747c")
+		)
+		(pin "1"
+			(uuid "763d1514-1422-4c61-8650-6f2456f4ef30")
+		)
+		(instances
+			(project "SendspinArc"
+				(path "/faa7f7ef-b387-4f3f-9c60-a8ff1acc425f"
+					(reference "JP3")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "power:GND")
 		(at 255.27 73.66 0)
 		(unit 1)
@@ -4014,6 +5248,164 @@
 			(project "SendspinArc"
 				(path "/faa7f7ef-b387-4f3f-9c60-a8ff1acc425f"
 					(reference "#PWR09")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Mechanical:MountingHole_Pad")
+		(at 67.31 27.94 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom no)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "e562172f-1995-4d62-a501-600c148fdce1")
+		(property "Reference" "H2"
+			(at 69.85 25.3999 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "MountingHole_Pad"
+			(at 69.85 27.9399 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "MountingHole:MountingHole_3.2mm_M3_DIN965_Pad_TopBottom"
+			(at 67.31 27.94 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 67.31 27.94 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Mounting Hole with connection"
+			(at 67.31 27.94 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "a15ef275-34e2-4462-aaf4-bed52c0ba550")
+		)
+		(instances
+			(project "SendspinArc"
+				(path "/faa7f7ef-b387-4f3f-9c60-a8ff1acc425f"
+					(reference "H2")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Mechanical:MountingHole_Pad")
+		(at 116.84 27.94 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom no)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "e62b8aa6-3732-4dc6-89bf-13079ef18b4b")
+		(property "Reference" "H4"
+			(at 119.38 25.3999 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "MountingHole_Pad"
+			(at 119.38 27.9399 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "MountingHole:MountingHole_3.2mm_M3_DIN965_Pad_TopBottom"
+			(at 116.84 27.94 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 116.84 27.94 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Mounting Hole with connection"
+			(at 116.84 27.94 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "a15ef275-34e2-4462-aaf4-bed52c0ba551")
+		)
+		(instances
+			(project "SendspinArc"
+				(path "/faa7f7ef-b387-4f3f-9c60-a8ff1acc425f"
+					(reference "H4")
 					(unit 1)
 				)
 			)
@@ -4131,7 +5523,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "PCM_JLCPCB:D_SOD-323"
+		(property "Footprint" "Diode_SMD:D_SOD-323"
 			(at 320.04 48.26 0)
 			(hide yes)
 			(show_name no)
@@ -4207,6 +5599,85 @@
 			(project "SendspinArc"
 				(path "/faa7f7ef-b387-4f3f-9c60-a8ff1acc425f"
 					(reference "D1")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Mechanical:MountingHole_Pad")
+		(at 40.64 27.94 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom no)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "ee10207f-11e4-4774-8935-5d6dfd07d961")
+		(property "Reference" "H1"
+			(at 43.18 25.3999 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "MountingHole_Pad"
+			(at 43.18 27.9399 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "MountingHole:MountingHole_3.2mm_M3_DIN965_Pad_TopBottom"
+			(at 40.64 27.94 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 40.64 27.94 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Mounting Hole with connection"
+			(at 40.64 27.94 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "a15ef275-34e2-4462-aaf4-bed52c0ba552")
+		)
+		(instances
+			(project "SendspinArc"
+				(path "/faa7f7ef-b387-4f3f-9c60-a8ff1acc425f"
+					(reference "H1")
 					(unit 1)
 				)
 			)

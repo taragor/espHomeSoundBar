@@ -1063,7 +1063,7 @@
 	)
 	(rectangle
 		(start 121.92 99.06)
-		(end 227.33 120.65)
+		(end 207.01 120.65)
 		(stroke
 			(width 0)
 			(type dash)
@@ -1132,7 +1132,7 @@
 		(uuid "8fea47e9-c14b-4902-987c-4f75f8c26461")
 	)
 	(junction
-		(at 196.85 93.98)
+		(at 180.34 93.98)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "905ccd40-1dbd-4cd8-885d-a9914883b4f9")
@@ -1162,13 +1162,13 @@
 		(uuid "fcbefda2-1f18-42fc-a3af-b3eafb6be244")
 	)
 	(junction
-		(at 191.77 93.98)
+		(at 175.26 93.98)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "ff80959d-779c-431f-810c-95a8f4edf802")
 	)
 	(bus_entry
-		(at 191.77 55.88)
+		(at 175.26 55.88)
 		(size 2.54 -2.54)
 		(stroke
 			(width 0)
@@ -1177,7 +1177,7 @@
 		(uuid "039e79f5-42b9-4ebc-b501-c034ad1ca1a5")
 	)
 	(bus_entry
-		(at 196.85 59.69)
+		(at 180.34 59.69)
 		(size 2.54 -2.54)
 		(stroke
 			(width 0)
@@ -1265,7 +1265,7 @@
 	)
 	(wire
 		(pts
-			(xy 191.77 93.98) (xy 184.15 93.98)
+			(xy 175.26 93.98) (xy 167.64 93.98)
 		)
 		(stroke
 			(width 0)
@@ -1275,7 +1275,7 @@
 	)
 	(wire
 		(pts
-			(xy 219.71 48.26) (xy 219.71 100.33)
+			(xy 203.2 48.26) (xy 203.2 100.33)
 		)
 		(stroke
 			(width 0)
@@ -1295,7 +1295,7 @@
 	)
 	(wire
 		(pts
-			(xy 204.47 93.98) (xy 204.47 90.17)
+			(xy 187.96 93.98) (xy 187.96 90.17)
 		)
 		(stroke
 			(width 0)
@@ -1315,7 +1315,7 @@
 	)
 	(wire
 		(pts
-			(xy 125.73 49.53) (xy 217.17 49.53)
+			(xy 125.73 49.53) (xy 200.66 49.53)
 		)
 		(stroke
 			(width 0)
@@ -1325,7 +1325,7 @@
 	)
 	(wire
 		(pts
-			(xy 194.31 62.23) (xy 194.31 100.33)
+			(xy 177.8 62.23) (xy 177.8 100.33)
 		)
 		(stroke
 			(width 0)
@@ -1385,7 +1385,7 @@
 	)
 	(bus
 		(pts
-			(xy 199.39 48.26) (xy 199.39 57.15)
+			(xy 182.88 48.26) (xy 182.88 57.15)
 		)
 		(stroke
 			(width 0)
@@ -1455,7 +1455,7 @@
 	)
 	(bus
 		(pts
-			(xy 148.59 53.34) (xy 194.31 53.34)
+			(xy 148.59 53.34) (xy 177.8 53.34)
 		)
 		(stroke
 			(width 0)
@@ -1465,7 +1465,7 @@
 	)
 	(wire
 		(pts
-			(xy 184.15 93.98) (xy 184.15 90.17)
+			(xy 167.64 93.98) (xy 167.64 90.17)
 		)
 		(stroke
 			(width 0)
@@ -1475,7 +1475,7 @@
 	)
 	(wire
 		(pts
-			(xy 196.85 93.98) (xy 196.85 100.33)
+			(xy 180.34 93.98) (xy 180.34 100.33)
 		)
 		(stroke
 			(width 0)
@@ -1505,7 +1505,7 @@
 	)
 	(wire
 		(pts
-			(xy 191.77 93.98) (xy 191.77 100.33)
+			(xy 175.26 93.98) (xy 175.26 100.33)
 		)
 		(stroke
 			(width 0)
@@ -1525,7 +1525,7 @@
 	)
 	(wire
 		(pts
-			(xy 217.17 49.53) (xy 217.17 100.33)
+			(xy 200.66 49.53) (xy 200.66 100.33)
 		)
 		(stroke
 			(width 0)
@@ -1575,7 +1575,7 @@
 	)
 	(wire
 		(pts
-			(xy 196.85 93.98) (xy 204.47 93.98)
+			(xy 180.34 93.98) (xy 187.96 93.98)
 		)
 		(stroke
 			(width 0)
@@ -1605,7 +1605,7 @@
 	)
 	(wire
 		(pts
-			(xy 214.63 48.26) (xy 214.63 100.33)
+			(xy 198.12 48.26) (xy 198.12 100.33)
 		)
 		(stroke
 			(width 0)
@@ -1635,7 +1635,7 @@
 	)
 	(bus
 		(pts
-			(xy 194.31 48.26) (xy 194.31 53.34)
+			(xy 177.8 48.26) (xy 177.8 53.34)
 		)
 		(stroke
 			(width 0)
@@ -1645,7 +1645,7 @@
 	)
 	(wire
 		(pts
-			(xy 128.27 62.23) (xy 194.31 62.23)
+			(xy 128.27 62.23) (xy 177.8 62.23)
 		)
 		(stroke
 			(width 0)
@@ -1665,7 +1665,7 @@
 	)
 	(wire
 		(pts
-			(xy 196.85 59.69) (xy 196.85 93.98)
+			(xy 180.34 59.69) (xy 180.34 93.98)
 		)
 		(stroke
 			(width 0)
@@ -1735,7 +1735,7 @@
 	)
 	(bus
 		(pts
-			(xy 153.67 57.15) (xy 199.39 57.15)
+			(xy 153.67 57.15) (xy 182.88 57.15)
 		)
 		(stroke
 			(width 0)
@@ -1745,7 +1745,7 @@
 	)
 	(wire
 		(pts
-			(xy 191.77 55.88) (xy 191.77 93.98)
+			(xy 175.26 55.88) (xy 175.26 93.98)
 		)
 		(stroke
 			(width 0)
@@ -1763,9 +1763,49 @@
 		)
 		(uuid "f8342287-0f6d-4b8f-abd7-b58fcb9a5c2a")
 	)
+	(label "ESP32-I2C.SDA"
+		(at 175.26 81.28 90)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "5e47b1ba-9cea-41ae-8868-5c66ca668cf2")
+	)
+	(label "HDMI-I2C.SCL"
+		(at 151.13 83.82 90)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "e1fc868a-a895-4bc4-ac3b-3b57d710a261")
+	)
+	(label "ESP32-I2C.SCL"
+		(at 146.05 83.82 90)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "f48a73d9-53c5-4ce5-87ed-902fa98732ee")
+	)
+	(label "HDMI-I2C.SDA"
+		(at 180.34 81.28 90)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "fd3cc0d3-88b4-466e-b68d-482e58e60b5b")
+	)
 	(hierarchical_label "VCC_HDMI"
 		(shape input)
-		(at 204.47 82.55 90)
+		(at 187.96 82.55 90)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -1776,7 +1816,7 @@
 	)
 	(hierarchical_label "VCC_ESP32"
 		(shape input)
-		(at 184.15 82.55 90)
+		(at 167.64 82.55 90)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -1787,7 +1827,7 @@
 	)
 	(hierarchical_label "ESP32-I2C{SDA SCL}"
 		(shape tri_state)
-		(at 194.31 48.26 90)
+		(at 177.8 48.26 90)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -1820,7 +1860,7 @@
 	)
 	(hierarchical_label "VCC_ESP32"
 		(shape input)
-		(at 214.63 48.26 90)
+		(at 198.12 48.26 90)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -1842,7 +1882,7 @@
 	)
 	(hierarchical_label "HDMI-I2C{SDA SCL}"
 		(shape tri_state)
-		(at 199.39 48.26 90)
+		(at 182.88 48.26 90)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -1864,7 +1904,7 @@
 	)
 	(hierarchical_label "VCC_HDMI"
 		(shape input)
-		(at 219.71 48.26 90)
+		(at 203.2 48.26 90)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -2065,7 +2105,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Connector_PinSocket_2.54mm:PinSocket_1x04_P2.54mm_Vertical"
+		(property "Footprint" "Connector_PinHeader_2.54mm:PinHeader_1x04_P2.54mm_Vertical"
 			(at 128.27 30.48 0)
 			(hide yes)
 			(show_name no)
@@ -2098,6 +2138,17 @@
 				)
 			)
 		)
+		(property "LCSC" "C160334"
+			(at 128.27 30.48 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "4"
 			(uuid "831ec517-18f7-487c-9dea-b0de58a01a23")
 		)
@@ -2121,7 +2172,7 @@
 	)
 	(symbol
 		(lib_id "Connector_Generic:Conn_01x03")
-		(at 194.31 105.41 270)
+		(at 177.8 105.41 270)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -2132,7 +2183,7 @@
 		(fields_autoplaced yes)
 		(uuid "441fd457-1bcc-4e25-91dd-18141b7ee6d3")
 		(property "Reference" "J4"
-			(at 195.5801 107.95 0)
+			(at 179.0701 107.95 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -2143,7 +2194,7 @@
 			)
 		)
 		(property "Value" "Conn_01x03"
-			(at 193.0401 107.95 0)
+			(at 176.5301 107.95 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -2154,7 +2205,7 @@
 			)
 		)
 		(property "Footprint" "Connector_PinHeader_2.54mm:PinHeader_1x03_P2.54mm_Vertical"
-			(at 194.31 105.41 0)
+			(at 177.8 105.41 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2165,7 +2216,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 194.31 105.41 0)
+			(at 177.8 105.41 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2176,7 +2227,7 @@
 			)
 		)
 		(property "Description" "Generic connector, single row, 01x03, script generated (kicad-library-utils/schlib/autogen/connector/)"
-			(at 194.31 105.41 0)
+			(at 177.8 105.41 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2238,7 +2289,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "PCM_JLCPCB:R_0603"
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
 			(at 136.652 86.36 90)
 			(hide yes)
 			(show_name no)
@@ -2320,7 +2371,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "PCM_JLCPCB:R_0603"
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
 			(at 155.702 86.36 90)
 			(hide yes)
 			(show_name no)
@@ -2526,7 +2577,7 @@
 	)
 	(symbol
 		(lib_id "Connector_Generic:Conn_01x03")
-		(at 217.17 105.41 270)
+		(at 200.66 105.41 270)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -2537,7 +2588,7 @@
 		(fields_autoplaced yes)
 		(uuid "79a52f7c-6cea-42a7-9090-e640b831340e")
 		(property "Reference" "J5"
-			(at 218.4401 107.95 0)
+			(at 201.9301 107.95 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -2548,7 +2599,7 @@
 			)
 		)
 		(property "Value" "Conn_01x03"
-			(at 215.9001 107.95 0)
+			(at 199.3901 107.95 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -2559,7 +2610,7 @@
 			)
 		)
 		(property "Footprint" "Connector_PinHeader_2.54mm:PinHeader_1x03_P2.54mm_Vertical"
-			(at 217.17 105.41 0)
+			(at 200.66 105.41 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2570,7 +2621,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 217.17 105.41 0)
+			(at 200.66 105.41 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2581,7 +2632,7 @@
 			)
 		)
 		(property "Description" "Generic connector, single row, 01x03, script generated (kicad-library-utils/schlib/autogen/connector/)"
-			(at 217.17 105.41 0)
+			(at 200.66 105.41 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2611,7 +2662,7 @@
 	)
 	(symbol
 		(lib_id "Device:R")
-		(at 204.47 86.36 0)
+		(at 187.96 86.36 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -2622,7 +2673,7 @@
 		(fields_autoplaced yes)
 		(uuid "a18d81b2-8df9-4bf1-9fe7-29ff7d2cf5d7")
 		(property "Reference" "R5"
-			(at 207.01 85.0899 0)
+			(at 190.5 85.0899 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -2633,7 +2684,7 @@
 			)
 		)
 		(property "Value" "R"
-			(at 207.01 87.6299 0)
+			(at 190.5 87.6299 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -2643,8 +2694,8 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "PCM_JLCPCB:R_0603"
-			(at 202.692 86.36 90)
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
+			(at 186.182 86.36 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2655,7 +2706,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 204.47 86.36 0)
+			(at 187.96 86.36 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2666,7 +2717,7 @@
 			)
 		)
 		(property "Description" "Resistor"
-			(at 204.47 86.36 0)
+			(at 187.96 86.36 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2693,7 +2744,7 @@
 	)
 	(symbol
 		(lib_id "Device:R")
-		(at 184.15 86.36 0)
+		(at 167.64 86.36 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -2704,7 +2755,7 @@
 		(fields_autoplaced yes)
 		(uuid "a4085cf1-bef0-4af5-be86-0fce369a20e2")
 		(property "Reference" "R4"
-			(at 186.69 85.0899 0)
+			(at 170.18 85.0899 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -2715,7 +2766,7 @@
 			)
 		)
 		(property "Value" "4k7"
-			(at 186.69 87.6299 0)
+			(at 170.18 87.6299 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -2725,8 +2776,8 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "PCM_JLCPCB:R_0603"
-			(at 182.372 86.36 90)
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
+			(at 165.862 86.36 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2737,7 +2788,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 184.15 86.36 0)
+			(at 167.64 86.36 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2748,7 +2799,7 @@
 			)
 		)
 		(property "Description" "Resistor"
-			(at 184.15 86.36 0)
+			(at 167.64 86.36 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2915,6 +2966,17 @@
 			)
 		)
 		(property "Description" "2Kb (256x8) I2C Serial EEPROM, 1.8-5.5V, SOIC-8"
+			(at 107.95 64.77 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC" "C83836"
 			(at 107.95 64.77 0)
 			(hide yes)
 			(show_name no)
