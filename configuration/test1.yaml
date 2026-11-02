@@ -1,0 +1,540 @@
+## SendspinZero NO Display Digital Version + HDMI ARC / CEC test
+## Everything below the marker "HDMI ARC TEST" is new; the rest is the working S/PDIF config,
+## unchanged except for the logger level (needed to see CEC traffic while testing).
+substitutions:
+  name: sendspinzero-no-display
+  friendly_name: Sendspin Zero No Display
+
+## SETTINGS ######################################################################################################################################
+
+  # Startup sound, options are: Home_Connected or Home_Connected_Male
+  startup_sound_file: Home_Connected
+  media_sample_rate: 44100
+
+  # --- HDMI ARC TEST: pins (GPIO4 = S/PDIF out and GPIO21 = LED are already used below) ---
+  cec_pin: GPIO5           # -> 220R -> CEC node (27k to 3V3) -> HDMI pin 13
+  sense_5v_pin: GPIO6      # HDMI pin 18 -> 68k -> node -> 100k -> GND
+  ddc_sda_pin: GPIO7       # -> BSS138 shifter -> DDC SDA (HDMI 16) + 24C02 SDA
+  ddc_scl_pin: GPIO8       # -> BSS138 shifter -> DDC SCL (HDMI 15) + 24C02 SCL
+  soundbar_addr: "0x05"    # CEC logical address of the audio system
+  soundbar_pa: "0x1000"    # physical address the soundbar gets from our EDID (port 1 of the root)
+
+## END OF SETTINGS ###############################################################################################################################
+
+esphome:
+  name: ${name}
+  friendly_name: ${friendly_name}
+  min_version: 2026.8.0
+  name_add_mac_suffix: false
+  project:
+    name: realdeco.sendspin_zero
+    version: "2026.8.0"
+  on_boot:
+    priority: -100
+    then:
+      - script.execute: led_red
+
+esp32:
+  variant: esp32s3
+  framework:
+    type: esp-idf
+
+logger:
+  level: debug             # TEMPORARY for the HDMI test (was: warn). hdmi_cec logs frames at debug level.
+
+api:
+  on_client_connected:
+    - lambda: |-
+        if (!id(boot_sound_played)) {
+          id(boot_sound_played) = true;
+          if (id(startup_sound_switch).state) {
+            id(play_sound)->execute(true, std::string("ready_sound"));
+          }
+        }
+
+  encryption:
+    key: !secret soundbar_sendspin__encryption_key
+ota:
+  - platform: esphome
+    password: !secret soundbar_sendspin__ota_password
+
+wifi:
+  output_power: 8.5dB
+  ap:
+  ssid: !secret wifi_ssid
+  password: !secret wifi_password
+
+improv_serial:
+
+psram:
+  mode: quad
+  speed: 80MHz
+
+captive_portal:
+
+sendspin:
+  id: sendspin_hub
+
+i2s_audio:
+  - id: i2s_audio_bus
+
+speaker:
+  - platform: i2s_audio
+    id: box_speaker
+    sample_rate: ${media_sample_rate}
+    i2s_dout_pin: GPIO4
+    spdif_mode: true
+    i2s_audio_id: i2s_audio_bus
+    dac_type: external
+    channel: stereo
+    use_apll: true
+    timeout: never          # HDMI TEST (new): keep sending S/PDIF silence after playback instead of stopping the carrier
+
+  - platform: mixer
+    id: mixing_speaker
+    output_speaker: box_speaker
+    num_channels: 2
+    source_speakers:
+      - id: announcement_mixing_input
+      - id: media_mixing_input
+
+  - platform: resampler
+    id: announcement_resampling_speaker
+    output_speaker: announcement_mixing_input
+    sample_rate: ${media_sample_rate}
+    bits_per_sample: 16
+
+  - platform: resampler
+    id: media_resampling_speaker
+    output_speaker: media_mixing_input
+    sample_rate: ${media_sample_rate}
+    bits_per_sample: 16
+
+audio_file:
+  - id: ready_sound
+    file: https://github.com/RealDeco/xiaozhi-esphome/raw/main/sounds/${startup_sound_file}.flac
+
+media_source:
+  - platform: audio_file
+    id: audio_file_announcement_source
+  - platform: audio_http
+    id: http_announcement_source
+  - platform: audio_http
+    id: http_media_source
+  - platform: sendspin
+    id: sendspin_media_source
+
+media_player:
+  - platform: sendspin
+    id: sendspin_group_media_player
+    name: Sendspin Group Media Player
+
+  - platform: speaker_source
+    id: external_media_player
+    name: Media Player
+
+    announcement_pipeline:
+      format: FLAC
+      num_channels: 1
+      sample_rate: ${media_sample_rate}
+      speaker: announcement_resampling_speaker
+      sources:
+        - audio_file_announcement_source
+        - http_announcement_source
+
+    media_pipeline:
+      format: FLAC
+      num_channels: 2
+      sample_rate: ${media_sample_rate}
+      speaker: media_resampling_speaker
+      sources:
+        - http_media_source
+        - sendspin_media_source
+    volume_increment: 0.05
+    volume_min: 0.4
+    volume_max: 0.9
+
+    on_state:
+      then:
+        - lambda: |-
+            using media_player::MediaPlayerState;
+            auto state = id(external_media_player).state;
+            if (
+              state == MediaPlayerState::MEDIA_PLAYER_STATE_PLAYING ||
+              state == MediaPlayerState::MEDIA_PLAYER_STATE_ANNOUNCING
+            ) {
+              id(led_green).execute();
+            } else {
+              id(led_red).execute();
+            }
+
+script:
+  - id: play_sound
+    parameters:
+      priority: bool
+      sound_file: string
+    then:
+      - if:
+          condition:
+            lambda: return priority;
+          then:
+            - media_player.stop:
+                id: external_media_player
+                announcement: true
+      - lambda: |-
+          if ((id(external_media_player).state != media_player::MediaPlayerState::MEDIA_PLAYER_STATE_ANNOUNCING) || priority) {
+            id(external_media_player)
+              ->make_call()
+              .set_media_url("audio-file://" + sound_file)
+              .set_announcement(true)
+              .perform();
+          }
+
+  - id: led_red
+    then:
+      - light.turn_on:
+          id: led
+          red: 100%
+          green: 0%
+          blue: 0%
+          brightness: 100%
+
+  - id: led_green
+    then:
+      - light.turn_on:
+          id: led
+          red: 0%
+          green: 100%
+          blue: 0%
+          brightness: 100%
+
+  # ===== HDMI ARC TEST (new) ==================================================================
+  # Announce ourselves as the TV, request system audio mode and ARC. Retries until ARC is up.
+  - id: arc_handshake
+    mode: restart
+    then:
+      - delay: 3s          # let the soundbar finish waking its CEC
+      - lambda: 'id(handshake_tries) = 0;'
+      - while:
+          condition:
+            lambda: 'return !id(arc_active).state && id(handshake_tries) < 8;'
+          then:
+            - hdmi_cec.send:
+                destination: 0x0F
+                data: [0x84, 0x00, 0x00, 0x00]   # Report Physical Address 0.0.0.0, device type TV
+            - delay: 300ms
+            - hdmi_cec.send:
+                destination: ${soundbar_addr}
+                data: [0x70, 0x00, 0x00]         # System Audio Mode Request (source = us)
+            - delay: 300ms
+            - hdmi_cec.send:
+                destination: ${soundbar_addr}
+                data: [0xC3]                     # Request ARC Initiation
+            - lambda: 'id(handshake_tries)++;'
+            - delay: 4s
+      - if:
+          condition:
+            lambda: 'return id(arc_active).state;'
+          then:
+            - hdmi_cec.send:
+                destination: ${soundbar_addr}
+                data: [0x71]                     # Give Audio Status
+            - hdmi_cec.send:
+                destination: 0x0F
+                data: [0x82, 0x00, 0x00]         # Active Source [0.0.0.0]: select the ARC input
+            - logger.log: "ARC is up"
+          else:
+            - logger.log:
+                level: WARN
+                format: "ARC did not come up after 8 tries"
+
+  - id: cec_key
+    parameters:
+      key: int
+    then:
+      - hdmi_cec.send:
+          destination: ${soundbar_addr}
+          data: !lambda 'return {0x44, (uint8_t) key};'   # User Control Pressed
+      - delay: 100ms
+      - hdmi_cec.send:
+          destination: ${soundbar_addr}
+          data: [0x45]                                   # User Control Released
+      - delay: 300ms
+      - hdmi_cec.send:
+          destination: ${soundbar_addr}
+          data: [0x71]                                   # Give Audio Status
+
+  # Absolute volume (new). CEC has no portable "set volume to N" for old soundbars, so this is a
+  # closed loop: press Volume Up/Down, ask for the audio status, repeat until the reported value
+  # reaches or passes the target. May overshoot by one soundbar step.
+  - id: set_volume
+    mode: restart            # a new target aborts the running one
+    parameters:
+      target: int
+    then:
+      - lambda: |-
+          id(vol_target) = target;
+          id(vol_steps) = 0;
+      - hdmi_cec.send:
+          destination: ${soundbar_addr}
+          data: [0x71]                                   # Give Audio Status: get a fresh start value
+      - delay: 500ms
+      - lambda: |-
+          float cur = id(soundbar_volume).state;
+          id(vol_dir) = (!std::isnan(cur) && id(vol_target) < (int) cur) ? -1 : 1;
+      - while:
+          condition:
+            lambda: |-
+              float cur = id(soundbar_volume).state;
+              if (std::isnan(cur) || id(vol_steps) >= 60) return false;
+              return id(vol_dir) > 0 ? cur < id(vol_target) : cur > id(vol_target);
+          then:
+            - hdmi_cec.send:
+                destination: ${soundbar_addr}
+                data: !lambda 'return {0x44, (uint8_t) (id(vol_dir) > 0 ? 0x41 : 0x42)};'
+            - delay: 80ms
+            - hdmi_cec.send:
+                destination: ${soundbar_addr}
+                data: [0x45]                             # User Control Released
+            - delay: 120ms
+            - hdmi_cec.send:
+                destination: ${soundbar_addr}
+                data: [0x71]                             # Give Audio Status
+            - delay: 250ms                               # wait for the Report Audio Status
+            - lambda: 'id(vol_steps)++;'
+
+switch:
+  - platform: template
+    id: sendspin_delay_adjustable
+    name: "Sendspin adjustable delay"
+    entity_category: config
+    optimistic: true
+    restore_mode: RESTORE_DEFAULT_OFF
+    turn_on_action:
+      - sendspin.media_source.enable_static_delay_adjustment:
+    turn_off_action:
+      - sendspin.media_source.disable_static_delay_adjustment:
+
+  - platform: template
+    id: startup_sound_switch
+    name: Startup sound
+    icon: "mdi:card-text-outline"
+    entity_category: config
+    optimistic: true
+    restore_mode: RESTORE_DEFAULT_ON
+
+button:
+  - platform: restart
+    id: restart_button
+    name: "Restart"
+    entity_category: config
+    icon: "mdi:restart"
+
+  # ===== HDMI ARC TEST (new) ==================================================================
+  - platform: template
+    name: "ARC handshake"
+    entity_category: diagnostic
+    on_press:
+      - script.execute: arc_handshake
+  - platform: template
+    name: "Soundbar volume up"
+    on_press:
+      - script.execute:
+          id: cec_key
+          key: 0x41
+  - platform: template
+    name: "Soundbar volume down"
+    on_press:
+      - script.execute:
+          id: cec_key
+          key: 0x42
+  - platform: template
+    name: "Soundbar mute toggle"
+    on_press:
+      - script.execute:
+          id: cec_key
+          key: 0x43
+  - platform: template
+    name: "Soundbar power on"
+    on_press:
+      - script.execute:
+          id: cec_key
+          key: 0x6D        # Power On function
+  - platform: template
+    name: "Soundbar power off"
+    on_press:
+      - script.execute:
+          id: cec_key
+          key: 0x6C        # Power Off function
+
+text_sensor:
+  - platform: sendspin
+    id: sendspin_title
+    name: "Song Title"
+    type: title
+
+  - platform: sendspin
+    id: sendspin_artist
+    name: "Song Artist"
+    type: artist
+
+  - platform: sendspin
+    id: sendspin_album
+    name: "Album Name"
+    type: album
+
+globals:
+  - id: boot_sound_played
+    type: bool
+    restore_value: no
+    initial_value: "false"
+  - id: boot_announce_active
+    type: bool
+    restore_value: no
+    initial_value: "false"
+  - id: handshake_tries      # HDMI ARC TEST (new)
+    type: int
+    initial_value: '0'
+  - id: vol_target           # absolute volume control (new)
+    type: int
+    initial_value: '0'
+  - id: vol_dir
+    type: int
+    initial_value: '1'
+  - id: vol_steps
+    type: int
+    initial_value: '0'
+
+light:
+  - platform: esp32_rmt_led_strip
+    id: led
+    name: LED light
+    disabled_by_default: false
+    entity_category: config
+    pin: GPIO21
+    default_transition_length: 0s
+    chipset: WS2812
+    num_leds: 1
+    channel_colors: grb
+    effects:
+      - pulse:
+          name: "Slow Pulse"
+          transition_length: 250ms
+          update_interval: 250ms
+          min_brightness: 50%
+          max_brightness: 100%
+      - pulse:
+          name: "Fast Pulse"
+          transition_length: 100ms
+          update_interval: 100ms
+          min_brightness: 50%
+          max_brightness: 100%
+
+# ################################ HDMI ARC TEST (new) ################################
+# The ESP plays the TV: EDID from a 24C02 on the DDC lines, CEC on one GPIO, ARC = the existing
+# S/PDIF output on GPIO4 (through the 330R/56R/10nF network to HDMI pin 14). See README.md.
+
+external_components:
+  - source: github://Palakis/esphome-hdmi-cec     # CEC
+  - source: github://taragor/espHomeSoundBar@main # hdmi_edid (components/hdmi_edid)
+    components: [hdmi_edid]
+
+i2c:
+  sda: ${ddc_sda_pin}
+  scl: ${ddc_scl_pin}
+  frequency: 100kHz
+  scan: false
+
+hdmi_edid:
+  physical_address: ${soundbar_pa}
+  monitor_name: "ESP ARC"
+
+hdmi_cec:
+  pin: ${cec_pin}
+  address: 0x00            # TV
+  physical_address: 0x0000 # root of the HDMI tree
+  osd_name: "ESP ARC"
+  promiscuous_mode: false
+  on_message:
+    # The soundbar asks "who is the active source?" (seen in the log right after ARC came up and
+    # nobody answered). A TV whose own input is active answers with <Active Source> and its
+    # physical address 0.0.0.0, which tells the soundbar to use the ARC input.
+    - opcode: 0x85         # Request Active Source
+      then:
+        - hdmi_cec.send:
+            destination: 0x0F
+            data: [0x82, 0x00, 0x00]   # Active Source [0.0.0.0]
+    # Soundbar asks us to start ARC -> acknowledge.
+    - opcode: 0xC0         # Initiate ARC
+      then:
+        - hdmi_cec.send:
+            destination: ${soundbar_addr}
+            data: [0xC1]   # Report ARC Initiated
+        - lambda: 'id(arc_active).publish_state(true);'
+    - opcode: 0xC5         # Terminate ARC
+      then:
+        - hdmi_cec.send:
+            destination: ${soundbar_addr}
+            data: [0xC2]   # Report ARC Terminated
+        - lambda: 'id(arc_active).publish_state(false);'
+    # Soundbar tells everyone whether system audio mode is on.
+    - opcode: 0x72         # Set System Audio Mode
+      then:
+        - lambda: 'id(system_audio).publish_state(!data.empty() && data.back() == 0x01);'
+    # Answer to our Give Audio Status: last byte = mute bit (7) + volume 0-100 (bits 0-6).
+    - opcode: 0x7A         # Report Audio Status
+      then:
+        - lambda: |-
+            if (!data.empty()) {
+              uint8_t s = data.back();
+              id(soundbar_volume).publish_state(s & 0x7F);
+              id(soundbar_volume_set).publish_state(s & 0x7F);
+              id(soundbar_mute).publish_state((s & 0x80) != 0);
+            }
+
+binary_sensor:
+  # Soundbar supplies +5V on HDMI pin 18 when it is on.
+  - platform: gpio
+    id: soundbar_5v
+    name: "Soundbar HDMI 5V"
+    pin:
+      number: ${sense_5v_pin}
+    filters:
+      - delayed_on: 500ms
+    on_press:
+      - script.execute: arc_handshake
+    on_release:
+      - lambda: 'id(arc_active).publish_state(false);'
+
+  - platform: template
+    id: arc_active
+    name: "ARC active"
+  - platform: template
+    id: system_audio
+    name: "System audio mode"
+  - platform: template
+    id: soundbar_mute
+    name: "Soundbar muted"
+
+sensor:
+  - platform: template
+    id: soundbar_volume
+    name: "Soundbar volume"
+    unit_of_measurement: "%"
+    accuracy_decimals: 0
+
+# Absolute volume slider (new): follows the soundbar's reported volume, and steps it with Volume Up/Down.
+number:
+  - platform: template
+    id: soundbar_volume_set
+    name: "Soundbar volume set"
+    unit_of_measurement: "%"
+    min_value: 0
+    max_value: 100
+    step: 1
+    mode: slider
+    optimistic: false        # state only changes when the soundbar reports it (see 0x7A handler)
+    set_action:
+      - script.execute:
+          id: set_volume
+          target: !lambda 'return (int) x;'
